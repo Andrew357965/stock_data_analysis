@@ -13,10 +13,12 @@ Financial time series are inherently noisy, making it difficult to extract meani
 
 ## Project Structure
 
+```
 ├── stock_data_analysis.ipynb   # Full analysis: EDA, KF, ML
 ├── [streamlit_link]            # Interactive app with AI agent
 ├── REQUIREMENTS.txt            # Python libraries required to run this project
 ├── README.md                   # Brief explanation of the project
+```
 
 ## Instalation and Usage
 
