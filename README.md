@@ -25,7 +25,7 @@ pip install -r requirements.txt
 Open `stock_data_analysis.ipynb` in Google Colab or Jupyter Notebook.
 
 ## Results
-KF extracted latent signal from raw data, which include random noise. Even though this was not sufficient for the ML models to effectively predict the direction of future price movements, confirming that technical features alone contain no exploitable structure. Finally, our models are consistent with the weak form of the Efficient Market Hypothesis.
+KF extracted latent signal from raw data, which include random noise. This was not sufficient for the ML models to effectively predict the direction of future price movements, confirming that technical features alone contain no exploitable structure. Finally, our models are consistent with the weak form of the Efficient Market Hypothesis.
 
 ## References
 - [1] Welch, G., Bishop, G. (2006). An Introduction to the Kalman Filter.
