@@ -1,1 +1,30 @@
-# stock_data_analysis
+# Financial Time Series Smoothing and Prediction using Kalman Filter and ML
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-app-red)
+
+Financial time series are inherently noisy, making it difficult to extract meaningful trends from raw price data. In this project we apply Exploratory Data Analysis (EDA) for better understanding the dataset and making insights, Kalman Filter (KF) to smooth stock price data and estimate the underlying latent signal and Machine Learning (ML) models (Logistic Regression, Random Forest, XGBoost) in an attempt to predict the direction of future price movements. The dataset contains daily stock data for Apple Inc. (2022–2024), including price-based features such as close, high, low, and derived quantities like returns and volatility.
+
+## Highlights
+
+- KF with adaptive noise parameters (Q and R) based on price's volatility
+- Feature engineering for classification models included residuals from KF
+- Quantitative verification of the weak form of the Efficient Market Hypothesis
+
+## Project Structure
+
+├── stock_data_analysis.ipynb   # Full analysis: EDA, KF, ML
+├── [streamlit_link]            # Interactive app with AI agent
+├── REQUIREMENTS.txt            # Python libraries required to run this project
+├── README.md                   # Brief explanation of the project
+
+## Instalation and Usage
+
+pip install -r requirements.txt
+
+## Results
+KF extracted latent signal from raw data, which include random noise
+
+## References
+- [1] Welch, G., Bishop, G. (2006). An Introduction to the Kalman Filter.
+- [2] Shumway, R.H., Stoffer, D.S. (1982). An approach to time series smoothing and forecasting using the EM algorithm
