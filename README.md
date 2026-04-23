@@ -7,7 +7,7 @@ Financial time series are inherently noisy, making it difficult to extract meani
 
 ## Highlights
 
-- KF with adaptive noise parameters (Q and R) based on price's volatility
+- KF with adaptive noise parameters (Q and R) based on market volatility
 - Feature engineering for classification models included residuals from KF
 - Quantitative verification of the weak form of the Efficient Market Hypothesis
 
@@ -16,16 +16,16 @@ Financial time series are inherently noisy, making it difficult to extract meani
 ```
 ├── stock_data_analysis.ipynb   # Full analysis: EDA, KF, ML
 ├── [streamlit_link]            # Interactive app with AI agent
-├── REQUIREMENTS.txt            # Python libraries required to run this project
-├── README.md                   # Brief explanation of the project
+├── requirements.txt            # Python libraries required to run this project
 ```
 
-## Instalation and Usage
+## Installation and Usage
 
 pip install -r requirements.txt
+Open `stock_data_analysis.ipynb` in Google Colab or Jupyter Notebook.
 
 ## Results
-KF extracted latent signal from raw data, which include random noise. Even though this wasn't sufficient enough for the ML models to effectively predict the direction of future price movements, it became clear that noise was indeed random and not linear or non-linear. Finally, our models are consistant with the weak form of the Effcient_market Hypothesis.
+KF extracted latent signal from raw data, which include random noise. Even though this was not sufficient for the ML models to effectively predict the direction of future price movements, confirming that technical features alone contain no exploitable structure. Finally, our models are consistent with the weak form of the Efficient Market Hypothesis.
 
 ## References
 - [1] Welch, G., Bishop, G. (2006). An Introduction to the Kalman Filter.
