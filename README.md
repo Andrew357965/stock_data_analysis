@@ -23,7 +23,7 @@ Financial time series are inherently noisy, making it difficult to extract meani
 ## Installation and Usage
 
 - pip install -r requirements.txt
-- Open `stock_data_analysis.ipynb` in Google Colab or Jupyter Notebook.
+- Open `stock_data_analysis.ipynb` in Google Colab.
 
 ## Results
 KF extracted latent signal from raw data, which include random noise. This was not sufficient for the ML models to effectively predict the direction of future price movements, confirming that technical features alone contain no exploitable structure. Finally, our models are consistent with the weak form of the Efficient Market Hypothesis.
