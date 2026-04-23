@@ -10,7 +10,7 @@ Financial time series are inherently noisy, making it difficult to extract meani
 - KF with adaptive noise parameters (Q and R) based on market volatility
 - Feature engineering for classification models included residuals from KF
 - Quantitative verification of the weak form of the Efficient Market Hypothesis
-![Kalman vs Raw](assets/kalman_vs_raw.png)
+![Kalman vs Observed](assets/kalman_vs_observed.png)
 
 ## Project Structure
 
