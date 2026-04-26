@@ -33,3 +33,6 @@ KF extracted latent signal from raw data, which include random noise. This was n
 ## References
 - [1] Welch, G., Bishop, G. (2006). An Introduction to the Kalman Filter.
 - [2] Shumway, R.H., Stoffer, D.S. (1982). An approach to time series smoothing and forecasting using the EM algorithm.
+
+## Author
+[Andreas Katsaounis] — [andkatsa@hotmail.com]
