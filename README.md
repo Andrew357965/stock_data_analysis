@@ -35,4 +35,4 @@ KF extracted latent signal from raw data, which include random noise. This was n
 - [2] Shumway, R.H., Stoffer, D.S. (1982). An approach to time series smoothing and forecasting using the EM algorithm.
 
 ## Author
-[Andreas Katsaounis] — [andkatsa@hotmail.com]
+Andreas Katsaounis — [andkatsa@hotmail.com]
