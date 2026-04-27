@@ -15,17 +15,23 @@ Financial time series are inherently noisy, making it difficult to extract meani
 ## Project Structure
 
 ```
-├── stock_data_analysis.ipynb   # Full analysis: EDA, KF, ML
+kalman-stock-analysis/
+├── README.md
+├── stock_data_analysis.ipynb                                # Full analysis notebook: EDA, KF, ML
 ├── [https://interactivestockdataanalysis.streamlit.app/]    # Interactive app with AI agent
 ├── app.py                                                   # streamlit code
 ├── requirements.txt                                         # Python libraries required to run streamlit code
+└── assets/                                                  # Plots used in README.md
+    ├── kalman_vs_raw.png
+    ├── model_comparison.png
+    └── feature_importance.png
 ```
 
 ## Installation and Usage
 
 - Open `stock_data_analysis.ipynb` in Google Colab.
 - Copy-paste streamlit link.
-- pip install -r requirements.txt if you want to run streamlit code
+- pip install -r requirements.txt                     # if you want to run streamlit code
 
 ## Results
 KF extracted latent signal from raw data, which include random noise. This was not sufficient for the ML models to effectively predict the direction of future price movements, confirming that technical features alone contain no exploitable structure. Finally, our models are consistent with the weak form of the Efficient Market Hypothesis.
