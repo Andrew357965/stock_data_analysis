@@ -17,11 +17,11 @@ Financial time series are inherently noisy, making it difficult to extract meani
 ```
 kalman-stock-analysis/
 ├── README.md
-├── stock_data_analysis.ipynb                                # Full analysis notebook: EDA, KF, ML
-├── (https://interactivestockdataanalysis.streamlit.app/)    # Interactive app with AI agent
-├── app.py                                                   # streamlit code
-├── requirements.txt                                         # Python libraries required to run streamlit code
-└── assets/                                                  # Plots used in README.md
+├── stock_data_analysis.ipynb                                     # Full analysis notebook: EDA, KF, ML
+├── [app](https://interactivestockdataanalysis.streamlit.app/)    # Interactive app with AI agent
+├── app.py                                                        # streamlit code
+├── requirements.txt                                              # Python libraries required to run streamlit code
+└── assets/                                                       # Plots used in README.md
     ├── kalman_vs_raw.png
     ├── model_comparison.png
     └── feature_importance.png
