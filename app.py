@@ -22,8 +22,8 @@ def get_stock_data(ticker, start_date, end_date):
 
 # EDA
 def eda(df):
-    df = df.reset_index()
     df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
+    df = df.reset_index()
     df.rename(columns={
         'Date':   'date',
         'Close':  'close',
