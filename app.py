@@ -22,13 +22,12 @@ def get_stock_data(ticker, start_date, end_date):
 
 # EDA
 def eda(df):
-
+    df = df.reset_index()
     st.write("Before eda - columns:", df.columns.tolist())
     st.write("Before eda - index:", df.index.name)
     st.stop()
     
     # Flatten MultiIndex columns
-    df = df.reset_index()
     df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
 
     df.columns = [col.lower() for col in df.columns]
