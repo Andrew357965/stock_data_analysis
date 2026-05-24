@@ -26,7 +26,11 @@ def eda(df):
     # Flatten MultiIndex columns
     df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
     df = df.reset_index()
-    
+
+    st.write("Columns:", df.columns.tolist())
+    st.write("Head:", df.head(2))
+    st.stop()
+
     df.columns = [col.lower() for col in df.columns]
 
     if 'date' in df.columns:
