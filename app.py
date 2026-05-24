@@ -21,17 +21,14 @@ def get_stock_data(ticker, start_date, end_date):
     return data
 
 # EDA
+
 def eda(df):
+    # Flatten MultiIndex columns
     df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
     df = df.reset_index()
-    df.rename(columns={
-        'Date':   'date',
-        'Close':  'close',
-        'High':   'high',
-        'Low':    'low',
-        'Open':   'open',
-        'Volume': 'volume'}, inplace=True)
-    df['date']       = pd.to_datetime(df['date']).dt.tz_localize(None)
+    
+    df.columns = [col.lower() for col in df.columns]
+    
     df['range']      = df['high'] - df['low']
     df['price_diff'] = df['close'].diff()
     df['returns']    = df['close'].pct_change()
