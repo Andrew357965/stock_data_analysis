@@ -22,6 +22,11 @@ def get_stock_data(ticker, start_date, end_date):
 
 # EDA
 def eda(df):
+
+    st.write("Before eda - columns:", df.columns.tolist())
+    st.write("Before eda - index:", df.index.name)
+    st.stop()
+    
     # Flatten MultiIndex columns
     df = df.reset_index()
     df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
@@ -92,10 +97,6 @@ split_pct = st.sidebar.slider("Train/Test Split",
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Author:** Andreas Katsaounis")
-
-st.write("Before eda - columns:", stock_data.columns.tolist())
-st.write("Before eda - index:", stock_data.index.name)
-st.stop()
 
 if start_date < end_date:
     stock_data = get_stock_data(selected_stock, start_date, end_date)
