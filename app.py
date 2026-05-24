@@ -20,10 +20,6 @@ def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date, auto_adjust=True)
     return data
 
-st.write("Before eda - columns:", stock_data.columns.tolist())
-st.write("Before eda - index:", stock_data.index.name)
-st.stop()
-
 # EDA
 def eda(df):
     # Flatten MultiIndex columns
@@ -96,6 +92,10 @@ split_pct = st.sidebar.slider("Train/Test Split",
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Author:** Andreas Katsaounis")
+
+st.write("Before eda - columns:", stock_data.columns.tolist())
+st.write("Before eda - index:", stock_data.index.name)
+st.stop()
 
 if start_date < end_date:
     stock_data = get_stock_data(selected_stock, start_date, end_date)
