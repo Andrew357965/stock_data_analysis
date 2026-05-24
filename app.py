@@ -28,6 +28,9 @@ def eda(df):
     df = df.reset_index()
     
     df.columns = [col.lower() for col in df.columns]
+
+    if 'date' in df.columns:
+        df['date'] = pd.to_datetime(df['date']).dt.tz_localize(None)
     
     df['range']      = df['high'] - df['low']
     df['price_diff'] = df['close'].diff()
