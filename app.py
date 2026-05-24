@@ -20,8 +20,11 @@ def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date, auto_adjust=True)
     return data
 
-# EDA
+st.write("Before eda - columns:", stock_data.columns.tolist())
+st.write("Before eda - index:", stock_data.index.name)
+st.stop()
 
+# EDA
 def eda(df):
     # Flatten MultiIndex columns
     df = df.reset_index()
